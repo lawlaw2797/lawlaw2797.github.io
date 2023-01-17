@@ -1,0 +1,266 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/* Navbar */
+
+.navigation-bar {
+  padding: 8px 10px 8px 30px;
+}
+
+/* Component 1 */
+.top-compartment {
+  padding: 160px 60px 60px 200px;
+  height: 500px;
+  position: relative;
+}
+
+@media (min-width: 640px) and (max-width: 1160px) {
+  .top-compartment {
+    padding: 160px 60px 60px 150px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 640px) {
+  .top-compartment {
+    padding: 160px 60px 60px 120px;
+  }
+}
+
+@media (min-width: 478px) and (max-width: 576px) {
+  .top-compartment {
+    padding: 160px 60px 60px 100px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 478px) {
+  .top-compartment {
+    padding: 160px 60px 0px 40px;
+  }
+}
+
+.katsu-img {
+  position: absolute;
+  left: 50%;
+  transform: rotate(-7deg);
+  bottom: -11%;
+  width: 200px;
+}
+
+@media (max-width: 576px) {
+  .katsu-img {
+    position: absolute;
+    left: 30%;
+    transform: rotate(-7deg);
+    bottom: -11%;
+  }
+}
+
+/* Skill Component */
+.skill-title {
+  margin-bottom: 50px;
+}
+
+.slanted-background {
+  margin-top: 30px;
+  margin-bottom: 150px;
+  padding-top: 100px;
+  text-align: center;
+  position: relative; /* Makes it possible to position the pseudo-element absolutely */
+}
+
+.slanted-background::before {
+  content: ""; /* This is required to display the pseudo-element */
+  position: absolute; /* Makes it possible to position the pseudo-element absolutely */
+  top: 0; /* Positions the pseudo-element at the top of the parent element */
+  left: 0; /* Positions the pseudo-element at the left of the parent element */
+  height: 700px; /* Makes the pseudo-element stretch the full height of the parent element */
+  /* height adjusted from 100% to a set height instead because we do not want weird auto-stretch behavior */
+  width: 100%; /* Makes the pseudo-element stretch the full width of the parent element */
+  background-color: #d39f93f8;
+  color: #444;
+  transform: skewY(
+    -7deg
+  ); /* Skews the pseudo-element along the Y-axis by -15 degrees */
+  z-index: -1; /* Makes the pseudo-element appear behind the child elements */
+}
+
+.console-icon {
+  width: 200px;
+}
+
+.skill-display {
+  position: relative;
+  height: 300px;
+}
+
+.skill-icons {
+  width: 50px;
+}
+
+.icon-desc {
+  margin-bottom: 50px;
+}
+
+/* Projects Section */
+.projects-title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.project-desc {
+  margin: auto;
+}
+
+.card-block {
+  margin: auto;
+}
+
+/* About Section */
+
+.slanted-bg-2 {
+  margin-top: 30px;
+  padding-top: 100px;
+  position: relative; /* Makes it possible to position the pseudo-element absolutely */
+  margin-bottom: 200px;
+}
+
+.slanted-bg-2::before {
+  content: ""; /* This is required to display the pseudo-element */
+  position: absolute; /* Makes it possible to position the pseudo-element absolutely */
+  top: 0; /* Positions the pseudo-element at the top of the parent element */
+  left: 0; /* Positions the pseudo-element at the left of the parent element */
+  height: 600px; /* Makes the pseudo-element stretch the full height of the parent element */
+  /* height adjusted from 100% to a set height instead because we do not want weird auto-stretch behavior */
+  width: 100%; /* Makes the pseudo-element stretch the full width of the parent element */
+  background-color: #d39f93f8;
+  color: #444;
+  transform: skewY(
+    -7deg
+  ); /* Skews the pseudo-element along the Y-axis by -15 degrees */
+  z-index: -1; /* Makes the pseudo-element appear behind the child elements */
+}
+
+@media (min-width: 424px) and (max-width: 620px) {
+  .slanted-bg-2::before {
+    height: 800px;
+  }
+}
+
+@media (max-width: 424px) {
+  .slanted-bg-2::before {
+    height: 900px;
+  }
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-row {
+  text-align: center;
+}
+
+.star-icon {
+  height: 250px;
+  margin-bottom: 30px;
+}
+
+.col-custom {
+  height: 280px;
+}
+
+@media (min-width: 992px) {
+  .star-icon {
+    padding-left: 220px;
+  }
+
+  .about-text {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .about-title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 992px) {
+  .slanted-bg-2::before {
+    height: 700px;
+  }
+}
+
+/* Contact Me Section */
+.contact-me-container {
+  width: 60%;
+  margin-bottom: 50px;
+}
+
+.contact-me-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.custom-text-area {
+  margin-bottom: 20px;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.status-img {
+  width: 150px;
+}
+
+.statbox {
+  height: 452px;
+  text-align: center;
+}
+
+/* Footer Section */
+.site-footer {
+  height: 150px;
+  color: white;
+  text-align: center;
+}
+
+.copyright-text {
+  padding-top: 75px;
+}
+
+/* Animation Code */
+.hidden-animation {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.hidden-animation-about {
+  opacity: 0;
+  transition: all 1s;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden-animation {
+    transition: none;
+  }
+
+  .hidden-animation-about {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.show-about {
+  opacity: 1;
+}
