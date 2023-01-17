@@ -12,6 +12,8 @@ import Footer from "./Footer";
 import { useInView } from "react-intersection-observer";
 
 function App() {
+
+  // React intersection observer
   const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0,
